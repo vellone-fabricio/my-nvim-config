@@ -33,7 +33,7 @@ return require('packer').startup(function(use)
             { 'williamboman/nvim-lsp-installer' },
             -- LSP Support
             { 'neovim/nvim-lspconfig' }, -- Required
-            {                        -- Optional
+            {                            -- Optional
                 'williamboman/mason.nvim',
                 run = function()
                     pcall(vim.cmd, 'MasonUpdate')
@@ -42,12 +42,12 @@ return require('packer').startup(function(use)
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
             -- Autocompletion
-            { 'hrsh7th/nvim-cmp' }, -- Required
+            { 'hrsh7th/nvim-cmp' },     -- Required
             { 'hrsh7th/cmp-nvim-lsp' }, -- Required
-            { 'L3MON4D3/LuaSnip' }, -- Required
-            { 'hrsh7th/cmp-buffer' }, -- optional
-            { 'hrsh7th/cmp-path' }, -- opt
-            { 'hrsh7th/cmp-cmdline' }, -- opt
+            { 'L3MON4D3/LuaSnip' },     -- Required
+            { 'hrsh7th/cmp-buffer' },   -- optional
+            { 'hrsh7th/cmp-path' },     -- opt
+            { 'hrsh7th/cmp-cmdline' },  -- opt
         }
     }
 
@@ -70,4 +70,6 @@ return require('packer').startup(function(use)
     end }
 
     use "lukas-reineke/indent-blankline.nvim"
+
+    use "github/copilot.vim"
 end)
