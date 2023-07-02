@@ -1,4 +1,5 @@
--- disable netrw at the very start of your init.lua
+-- if this is enabled, nvim-tree will not allow us to use :Ex command
+--
 --vim.g.loaded_netrw = 1
 --vim.g.loaded_netrwPlugin = 1
 
@@ -29,6 +30,7 @@ require("nvim-tree").setup({
         group_empty = true,
     },
     filters = {
-        dotfiles = true,
+        dotfiles = false,
+        custom = {"^\\.git"},
     },
 })
